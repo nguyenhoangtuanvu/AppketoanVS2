@@ -45,8 +45,8 @@ table {
 
 /* base */
 :root {
-    --primary-color-blu: #08aeac;
-    --primary-color-black: #021533;
+    --primary-color: #0075c0;
+    --primary-color-green: #4ea344;
     --primary-color-red: #b31f27;
     --text-color: #021533;
     --text-white-color: white;
@@ -56,10 +56,9 @@ table {
 }
 html {
     font-size: 65.5%;
-    line-height: 1.6rem;
+    line-height: 1.4rem;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    height: 100%;
 }
 body {
     height: 100%;
@@ -72,8 +71,5 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    padding-top: 0;
-    margin: 0 auto;
-    background: url(../img/bg1.jpg) no-repeat center center fixed; 
-    background-size: cover;
+    display: flex;
 }
