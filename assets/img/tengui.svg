@@ -1,0 +1,78 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="690" height="350" viewBox="0 0 690 350">
+  <title>qt_TienGui</title>
+  <rect width="690" height="350" style="fill: #fff;opacity: 0"/>
+  <g>
+    <g id="Group_26919" data-name="Group 26919">
+      <rect id="Rectangle_15582" data-name="Rectangle 15582" x="106" y="229" width="36" height="44" rx="2" style="fill: #2ca01c"/>
+      <path id="Path_29844" data-name="Path 29844" d="M141.63,234.16A45.72,45.72,0,0,1,108,273h0a2,2,0,0,1-2-2V231a2,2,0,0,1,2-2h32a2,2,0,0,1,2,2Z" style="fill: #47b138"/>
+      <g id="Group_26890" data-name="Group 26890" style="opacity: 0.5">
+        <path id="Path_11120-2" data-name="Path 11120-2" d="M110,243h24v2H110Z" style="fill: #fff"/>
+        <path id="Path_11120-2-2" data-name="Path 11120-2-2" d="M110,247h24v2H110Z" style="fill: #fff"/>
+        <path id="Path_11120-2-3" data-name="Path 11120-2-3" d="M110,251h14v2H110Z" style="fill: #fff"/>
+        <path id="Path_11120-2-4" data-name="Path 11120-2-4" d="M110,255h14v2H110Z" style="fill: #fff"/>
+      </g>
+      <g id="Group_26891" data-name="Group 26891">
+        <path id="Path_29846" data-name="Path 29846" d="M114,233h-1a2,2,0,0,0-2,2v2a2,2,0,0,0,2,2h1" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_970" data-name="Line 970" x1="117" y1="233" x2="117" y2="239" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_971" data-name="Line 971" x1="117" y1="236" x2="121" y2="236" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_972" data-name="Line 972" x1="121" y1="233" x2="121" y2="239" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_973" data-name="Line 973" x1="124" y1="233" x2="124" y2="239" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      </g>
+      <g id="Group_26920" data-name="Group 26920">
+        <path id="Path_29862" data-name="Path 29862" d="M149,256l-10-4-10,4v4h20Z" style="fill: #fb0;stroke: #e59033;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <path id="Path_29863" data-name="Path 29863" d="M147,260v6l2,2v4H129v-4l2-2v-6Z" style="fill: #fb0;stroke: #e59033;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_1028" data-name="Line 1028" x1="139" y1="264" x2="139" y2="268" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_1029" data-name="Line 1029" x1="143" y1="264" x2="143" y2="268" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_1030" data-name="Line 1030" x1="135" y1="264" x2="135" y2="268" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_1158" data-name="Line 1158" x1="138" y1="257" x2="140" y2="257" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      </g>
+    </g>
+    <g id="Group_26918" data-name="Group 26918">
+      <rect id="Rectangle_15633" data-name="Rectangle 15633" x="106" y="52" width="36" height="44" rx="2" style="fill: #2ca01c"/>
+      <path id="Path_29858" data-name="Path 29858" d="M141.63,57.16A45.72,45.72,0,0,1,108,96h0a2,2,0,0,1-2-2V54a2,2,0,0,1,2-2h32a2,2,0,0,1,2,2Z" style="fill: #47b138"/>
+      <g id="Group_26916" data-name="Group 26916">
+        <line id="Line_1020" data-name="Line 1020" x1="113" y1="56" x2="113" y2="62" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_1021" data-name="Line 1021" x1="111" y1="56" x2="115" y2="56" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_1022" data-name="Line 1022" x1="118" y1="56" x2="118" y2="62" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_1023" data-name="Line 1023" x1="118" y1="59" x2="122" y2="59" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="Line_1024" data-name="Line 1024" x1="122" y1="56" x2="122" y2="62" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        <path id="Path_29859" data-name="Path 29859" d="M125,56v6h4V56" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      </g>
+      <path id="Path_29860" data-name="Path 29860" d="M149,79l-10-4-10,4v4h20Z" style="fill: #fb0;stroke: #e59033;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      <path id="Path_29861" data-name="Path 29861" d="M147,83v6l2,2v4H129V91l2-2V83Z" style="fill: #fb0;stroke: #e59033;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      <line id="Line_1025" data-name="Line 1025" x1="139" y1="87" x2="139" y2="91" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      <line id="Line_1026" data-name="Line 1026" x1="143" y1="87" x2="143" y2="91" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      <line id="Line_1027" data-name="Line 1027" x1="135" y1="87" x2="135" y2="91" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      <g id="Group_26917" data-name="Group 26917" style="opacity: 0.5">
+        <path id="Path_11120-2-5" data-name="Path 11120-2-5" d="M110,66h24v2H110Z" style="fill: #fff"/>
+        <path id="Path_11120-2-6" data-name="Path 11120-2-6" d="M110,70h24v2H110Z" style="fill: #fff"/>
+        <path id="Path_11120-2-7" data-name="Path 11120-2-7" d="M110,74h14v2H110Z" style="fill: #fff"/>
+        <path id="Path_11120-2-8" data-name="Path 11120-2-8" d="M110,78h14v2H110Z" style="fill: #fff"/>
+      </g>
+      <line id="Line_1159" data-name="Line 1159" x1="138" y1="80" x2="140" y2="80" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+    </g>
+    <g id="Group_26921" data-name="Group 26921">
+      <rect id="Rectangle_15636" data-name="Rectangle 15636" x="365" y="140" width="36" height="44" rx="2" style="fill: #2ca01c"/>
+      <path id="Path_29864" data-name="Path 29864" d="M400.63,145.16A45.72,45.72,0,0,1,367,184h0a2,2,0,0,1-2-2V142a2,2,0,0,1,2-2h32a2,2,0,0,1,2,2Z" style="fill: #47b138"/>
+      <rect id="Rectangle_15637" data-name="Rectangle 15637" x="385" y="157" width="24" height="27" rx="2" style="fill: #e59033"/>
+      <path id="Path_29866" data-name="Path 29866" d="M369.67,148.24l2,2,4-4" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      <path id="Path_29867" data-name="Path 29867" d="M369.67,154.24l2,2,4-4" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      <g id="Group_26800" data-name="Group 26800" style="opacity: 0.5">
+        <path id="Path_11120-2-9" data-name="Path 11120-2-9" d="M381,147h12v2H381Z" style="fill: #fff"/>
+        <path id="Path_11120-2-2-2" data-name="Path 11120-2-2-2" d="M381,153h12v2H381Z" style="fill: #fff"/>
+      </g>
+      <path id="Path_29865" data-name="Path 29865" d="M408.63,162.16C407,174,402,182,387,184h0a2,2,0,0,1-2-2V159a2,2,0,0,1,2-2h20a2,2,0,0,1,2,2Z" style="fill: #fb0"/>
+      <path id="Path_29868" data-name="Path 29868" d="M387.67,163.24l2,2,4-4" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      <path id="Path_29869" data-name="Path 29869" d="M387.67,169.24l2,2,4-4" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+      <g id="Group_26800-2" data-name="Group 26800-2" style="opacity: 0.5">
+        <path id="Path_11120-2-10" data-name="Path 11120-2-10" d="M399,162h6v2h-6Z" style="fill: #fff"/>
+        <path id="Path_11120-2-2-3" data-name="Path 11120-2-2-3" d="M399,168h6v2h-6Z" style="fill: #fff"/>
+      </g>
+    </g>
+    <line id="Line_1203" data-name="Line 1203" x1="126" y1="145" x2="126" y2="205" style="fill: none;stroke: #b4c8b1;stroke-width: 2px"/>
+    <line id="Line_1204" data-name="Line 1204" x1="126" y1="175" x2="296" y2="175" style="fill: none;stroke: #b4c8b1;stroke-width: 2px"/>
+    <line id="Line_1205" data-name="Line 1205" x1="478" y1="175" x2="588" y2="175" style="fill: none;stroke: #b4c8b1;stroke-width: 2px"/>
+    <path id="Path_30411" data-name="Path 30411" d="M583,170l5,5-5,5" style="fill: none;stroke: #b4c8b1;stroke-miterlimit: 10;stroke-width: 2px"/>
+    <path id="Path_30411-2" data-name="Path 30411" d="M291,170l5,5-5,5" style="fill: none;stroke: #b4c8b1;stroke-miterlimit: 10;stroke-width: 2px"/>
+  </g>
+</svg>

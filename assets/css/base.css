@@ -47,9 +47,12 @@ table {
 :root {
     --primary-color: #0075c0;
     --primary-color-green: #4ea344;
-    --primary-color-red: #b31f27;
+    --primary-color-orange: #ff7f2c;
     --text-color: #021533;
-    --text-white-color: white;
+    --text-white-color: #fff;
+    --backg-hover-color: #e3e5e8;
+    --content-bacg-color: rgb(244, 245, 248);
+    --text-color-blur: #8796a7;
 }
 * {
     box-sizing: inherit;
@@ -63,6 +66,7 @@ html {
 body {
     height: 100%;
     margin: 0;
+    overflow-y: hidden;
 }
 /* responsive */
 .grid {
@@ -72,4 +76,119 @@ body {
     top: 0;
     left: 0;
     display: flex;
+}
+.row {
+    width: 100%;
+    display: flex;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.flex {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* menu nav */
+.nav-overview {
+    display: none;
+}
+.nav-cash {
+    /* display: none; */
+}
+.nav-banking {
+    display: none;
+}
+.nav-purchase {
+    display: none;
+}
+.nav-sales {
+    display: none;
+}
+.nav-invoice-managing {
+    display: none;
+}
+.nav-inventory {
+    display: none;
+}
+.nav-fixed-assets {
+    display: none;
+}
+.nav-tax {
+    display: none;
+}
+.nav-price {
+    display: none;
+}
+.nav-general {
+    display: none;
+}
+.nav-budget {
+    display: none;
+}
+.nav-report {
+    display: none;
+}
+.nav-finaical-analysis {
+    display: none;
+}
+
+/* menu content */
+.overview {
+    display: none;
+}
+.cash {
+    /* display: none; */
+}
+.cash-first-function {
+    display: none;
+}
+.cash-second-function {
+    /* display: none; */
+}
+.cash-third-function {
+    display: none;
+}
+.cash-fourth-function {
+    display: none;
+}
+
+
+.banking {
+    display: none;
+}
+.purchase {
+    display: none;
+}
+.sales {
+    display: none;
+}
+.invoice-managing {
+    display: none;
+}
+.inventory {
+    display: none;
+}
+.tool {
+    display: none;
+}
+.fixed-assets {
+    display: none;
+}
+.tax {
+    display: none;
+}
+.price {
+    display: none;
+}
+.general {
+    display: none;
+}
+.budget {
+    display: none;
+}
+.report {
+    display: none;
+}
+.financial-analysis {
+    display: none;
 }
