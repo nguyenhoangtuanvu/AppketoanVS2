@@ -31,6 +31,7 @@
     transition: padding-left .2s ease-in-out;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .sidebar-work-items:hover {
     padding-left: 30px;
@@ -130,7 +131,7 @@
 }
 .header-end__search-icon {
     margin-right: 15px;
-    width: 16px;
+    width: 22px;
     height: 16px;
     background: url(../img/allIcon.svg);
     background-position: -992px -360px;
@@ -618,6 +619,7 @@
 .nav-items {
     padding: 15px 20px;
     font-size: 1.1rem;
+    font-weight: 500;
 }
 .nav-items:hover {
     color: var(--primary-color);
@@ -1036,6 +1038,11 @@
 .cash-first-column-left-bottom {
     height: 70px;
     display: flex;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.cash-first-column-left-bottom > div:hover{
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px;
 }
 .cash-first-bottom-box3 {
     width: 33%;
@@ -1062,7 +1069,7 @@
     height: 24px;
     background: url(../img/allIcon.svg);
     background-position: -928px -200px;
-    margin-left: 15px;
+    margin-left: 30px;
 }
 .cash-first-employee-icon {
     width: 24px;
@@ -1187,45 +1194,795 @@
 
 
 .second-content {
-    
+    width: calc(100% - 40px);
+    background-color: #fff;
+    margin-top: 20px
 }
 .second-content-wrap {
-    
+    padding: 0 16px;
 }
 .second-content-header {
-    
+    padding: 16px;
+    display: flex;
+    align-items: center;
 }
 .second-content__filter {
-
+    display: flex;
+    align-items: center;
+    border: 2px solid #3b3c3f;
+    padding: 8px 16px;
+    border-radius: 30px;
+    margin-right: 10px;
+    position: relative;
 }
 .second-content__filter-label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-right: 5px;
+}
+.second-content__filter:hover {
+    background-color: var(--backg-hover-color);
+}
+.second-content-time-line__dropdown-list {
+    position: absolute;
+    width: 400px;
+    height: 210px;
+    top: 110%;
+    left: 0px;
+    padding: 16px 20px 20px;
+    background-color: #fff;
+    border: 1px solid #babec5;
+    border-radius: 4px;
+    display: none;
+}
+.dropdown-label {
+    font-size: 1.3rem ;
+    font-weight: 500;
+}
+.dropdown-box-wrap {
+    height: 30px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 1px solid #babec5;
+    position: relative;
+}
+.dropdown-input {
+    height: 100%;
+    width: calc(100% - 20px);
+    border: none;
+    padding-left: 10px;
+    outline: none;
+}
+.dropdown-box-list {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    top: 110%;
+    background-color: #fff;
+    border: 1px solid #babec5;
+    overflow-y: scroll;
+    display: none;
+}
 
+.dropdown-btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+.dropdown-btn {
+    padding: 7px 14px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.dropdown-btn:hover {
+    padding: 7px 14px;
+    opacity: .8;
+}
+
+.second-content-filter__value {
+    flex: 1;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.header-search__input {
+    outline: none;
+}
+/* second content table */
+.second-content-table {
+    /* display: none; */
+    max-height: 40vh;
+    overflow-y: scroll;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.second-table {
+}
+.table-header {
+    border: 1px solid #c7c7c7;
+    border-top: none;
+    background-color: #eceef1;
+    height: 34px;  
+    vertical-align: middle;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.table-box {
+    height: 34px;
+    vertical-align: middle;
+    border: 1px solid #c7c7c7;
+    position: relative;
+}
+.second-table__body > tr:hover {
+    background-color: var(--table-items-hover-color);
+}
+.footer-box {
+    height: 34px;
+    background-color: #eceef1;
+    vertical-align: middle;
+}
+.second-table__box1 {
+    width: 150px;
+    text-align: center;
+}
+.second-table__box2 {
+    width: 120px;
+    text-align: center;
+}
+.second-table__box3 {
+    width: 400px;
+    text-align: left;
+    padding-left: 20px;
+}
+.second-table__box4 {
+    width: 180px;
+    text-align: right;
+    padding-right: 20px;
+}
+.second-table__box5 {
+    width: 250px;
+    text-align: center;
+}
+.third-table__box6 {
+    width: 140px;
+    text-align: center;
+}
+.third-table-see {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+.third-table__box6 > i {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.third-table-function-list {
+    position: absolute;
+    width: 100px;
+    top: 75%;
+    background-color: #fff;
+    border: 1px solid #333;
+    display: block;
+    z-index: 1;
+    display: none;
+}   
+.third-table-function-items {
+    width: 100%;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.third-table-function-items:hover {
+    background-color: var(--backg-hover-color);
+    color: var(--primary-color);
+}
+.third-table-function-items:hover .third-table-function__link{
+    color: var(--primary-color);
+}
+.third-table-function__link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+}
+.second-footer {
+    padding: 16px;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.second-footer__label span {
+    font-weight: 600;
+}
+.second-footer-right {
+    display: flex;
+    align-items: center;
+}
+.second-footer__prev {
+    color: #9e9e9e;
+}
+.second-footer__count-paging {
+    padding: 2px 8px;
+    font-weight: 600;
+    border: 1px solid #e0e0e0;
+    margin: 0 10px;
+}
+.second-footer__next {
+    color: #9e9e9e;
+}
+
+/* cash-third-function */
+.third-table__box1 {
+    width: 150px;
+    text-align: center;
+}
+.third-table__box2 {
+    width: 120px;
+    text-align: center;
+}
+.third-table__box3 {
+    width: 150px;
+    text-align: center;
+}
+.third-table__box4 {
+    width: 180px;
+    text-align: right;
+    padding-right: 20px;
+}
+.third-table__box5 {
+    width: 500px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* banking  */
+.banking-first-banking {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-right: 2px;
+}
+.cash-first-banking-icon {
+    width: 24px;
+    height: 24px;
+    background: url(../img/allIcon.svg);
+    background-position: -1096px -200px;
+    margin-left: 20px;
+}
+.banking-first-width {
+    width: 16%;
+}
+.banking-first-width {
+    width: 16%;
+}
+.banking-first-width {
+    width: 16%;
+}
+
+/* purchar  */
+
+.purchase-operation-content {
+    width: 100%;
+    height: 100%;
+    background: url(../img/muahang.svg);
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.purchase-operation-box {
+    position: absolute;
+    width: 90px;
+    padding: 0 15px 10px;
+    padding-top: 60px;
+    text-align: center;
+}
+.purchase-operation-box:hover {
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+.purchase-operation-box1 {
+    top: 29px;
+    left: 39px
+}
+.purchase-operation-box2 {
+    top: 29px;
+    left: 192px
+}
+.purchase-operation-box3 {
+    top: 29px;
+    left: 345px
+}
+.purchase-operation-box4 {
+    top: 29px;
+    left: 500px
+}
+.purchase-operation-box5 {
+    top: 221px;
+    left: 39px
+}
+.purchase-operation-box6 {
+    top: 221px;
+    left: 192px
+}
+.purchase-operation-box7 {
+    top: 221px;
+    left: 362px
+}
+.purchase-first-width {
+    width: 25%;
+    margin-right: 2px;
+}
+
+/* purchase third function */
+.second-sup-table__box1 {
+    width: 140px;
+    text-align: center;
+}
+.second-sup-table__box2 {
+    width: 340px;
+    text-align: left;
+    padding-left: 20px;
+}
+.second-sup-table__box3 {
+    width: 340px;
+    text-align: left;
+    padding-left: 20px;
+}
+.second-sup-table__box4 {
+    width: 150px;
+    text-align: center;
+}
+.second-sup-table__box5 {
+    width: 150px;
+    text-align: center;
+}
+.second-sup-table__box6 {
+    width: 150px;
+}
+
+/* purchase fourth function */
+
+.fourth-box {
+    height: 120px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fourth-box1 {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #333;
+    padding: 0 20px;
+}
+.fourth-box2 {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.fourth-box1-icon {
+    width: 90px;
+    height: 90px;
+    background: url(../img/allIcon.svg);
+    background-position: -27px -1311px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    box-sizing: content-box;
+    margin-right: 20px;
+}
+.fourth-box1-icon:hover {
+    border-color: rgba(254, 167, 17, 0.3);
+}
+.fourth-box2-icon {
+    width: 90px;
+    height: 90px;
+    background: url(../img/allIcon.svg);
+    background-position: -139px -1307px;
+    border: 2px solid rgb(255, 255, 255);
+    box-sizing: content-box;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.fourth-box2-icon:hover {
+    border-color: rgba(255, 0, 0, 0.3);
+}
+.fourth-box__summary {
+    font-size: 1.4rem;
+}
+.fourth-box__money  {
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+.fourth-box__money-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.fourth-box__money-summary {
+    font-weight: 500;
+    color: var(--text-color-blur);
+}
+.second-goods-table__box1 {
+    width: 350px;
+    text-align: left;
+    padding-left: 20px;
+}
+.second-goods-table__box2 {
+    width: 150px;
+    text-align: center;
+}
+.second-goods-table__box3 {
+    width: 200px;
+    text-align: center;
+}
+.second-goods-table__box4 {
+    width: 150px;
+    text-align: right;
+    padding-right: 20px;
+}
+.second-goods-table__box5 {
+    width: 200px;
+    text-align: right;
+    padding-right: 20px;    
 }
 
 
+/* sales first-function */
+.sales-operation-content {
+    width: 100%;
+    height: 100%;
+    background: url(../img/banhang.svg);
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.sales-operation-box1 {
+    top: 29px;
+    left: 32px
+}
+.sales-operation-box2 {
+    top: 35px;
+    left: 192px
+}
+.sales-operation-box3 {
+    top: 35px;
+    left: 367px
+}
+.sales-operation-box4 {
+    top: 35px;
+    left: 518px
+}
+.sales-operation-box5 {
+    top: 133px;
+    left: 31px
+}
+.sales-operation-box6 {
+    top: 234px;
+    left: 30px
+}
+.sales-operation-box7 {
+    top: 220px;
+    left: 211px
+}
+.sales-operation-box8 {
+    top: 220px;
+    left: 387px
+}
 
+.cash-first-inventory-icon {
+    width: 24px;
+    height: 24px;
+    background: url(../img/allIcon.svg);
+    background-position: -1152px -200px;
+    margin-left: 40px;
+}
+.cash-first-service-icon {
+    width: 24px;
+    height: 24px;
+    background: url(../img/allIcon.svg);
+    background-position: -1208px -200px;
+    margin-left: 50px;
+}
+.cash-first-tool-icon {
+    width: 24px;
+    height: 24px;
+    background: url(../img/allIcon.svg);
+    background-position: -1040px -200px;
+    margin-left: 15px;
+}
+/* sales second-function */
+.sales-second-box1 {
+    width: 20%;
+    margin-right: 3px;
+    background-color: #00a9f2;
+    display: flex;
+    align-items: center;
+}
+.sales-second-box2 {
+    width: 20%;
+    margin-right: 3px;
+    background-color: #0075c0;
+    display: flex;
+    align-items: center;
+}
+.sales-second-box3 {
+    width: 20%;
+    margin-right: 3px;
+    background-color: #ff7f2c;
+    display: flex;
+    align-items: center;
+}
+.sales-second-box4 {
+    width: 20%;
+    margin-right: 3px;
+    background-color: #b8bcc3;
+    display: flex;
+    align-items: center;
+}
+.sales-second-box5 {
+    width: 20%;
+    margin-right: 3px;
+    background-color: #74cb2f;
+    display: flex;
+    align-items: center;
+}
+.sales-second-table__box1 {
+    width: 150px;
+    text-align: center;
+}
+.sales-second-table__box2 {
+    width: 120px;
+    text-align: center;
+}
+.sales-second-table__box3 {
+    width: 400px;
+    text-align: left;
+    padding-left: 20px;
+}
+.sales-second-table__box4 {
+    width: 180px;
+    text-align: right;
+    padding-right: 20px;
+}
+.sales-second-table__box5 {
+    width: 240px;
+    text-align: center;
+}
+.sales-second-table__box6 {
+    width: 160px;
+}
 
+/* bill */
 
+.bill-operation-content {
+    width: 100%;
+    height: 100%;
+    background: url(../img/bill.svg);
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.bill-operation-box1 {
+    top: 29px;
+    left: 32px
+}
+.bill-operation-box2 {
+    top: 35px;
+    left: 205px
+}
+.bill-operation-box3 {
+    top: 35px;
+    left: 385px
+}
+.bill-operation-box4 {
+    top: 35px;
+    left: 523px
+}
+.bill-operation-box5 {
+    top: 126px;
+    left: 31px
+}
+.bill-operation-box6 {
+    top: 126px;
+    left: 310px
+}
+.bill-operation-box7 {
+    top: 234px;
+    left: 30px
+}
+.bill-operation-box8 {
+    top: 218px;
+    left: 179px
+}
+.bill-operation-box9 {
+    top: 216px;
+    left: 577px
+}
 
+/* kho first-function */
+.inventory-operation-content {
+    width: 100%;
+    height: 100%;
+    background: url(../img/kho.svg);
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.inventory-operation-box1 {
+    top: 29px;
+    left: 50px
+}
+.inventory-operation-box2 {
+    top: 48px;
+    left: 234px
+}
+.inventory-operation-box3 {
+    top: 48px;
+    left: 367px
+}
+.inventory-operation-box4 {
+    top: 219px;
+    left: 43px
+}
+.inventory-operation-box5 {
+    top: 228px;
+    left: 255px
+}
+.inventory-operation-box6 {
+    top: 228px;
+    left: 395px
+}
+.inventory-operation-box7 {
+    top: 228px;
+    left: 542px
+}
 
+.cash-first-unit-icon {
+    width: 24px;
+    height: 24px;
+    background: url(../img/allIcon.svg);
+    background-position: -872px -256px;
+    margin-left: 15px;
+}
+.cash-first-store-icon {
+    width: 24px;
+    height: 24px;
+    background: url(../img/allIcon.svg);
+    background-position: -1264px -200px;
+    margin-left: 5px;
+}
+/* kho second-function */
+.second-inventory-table__box1 {
+    width: 150px;
+    text-align: center;
+}
+.second-inventory-table__box2 {
+    width: 120px;
+    text-align: center;
+}
+.second-inventory-table__box3 {
+    width: 500px;
+    text-align: left;
+    padding-left: 20px;
+}
+.second-inventory-table__box4 {
+    width: 150px;
+    text-align: right;
+    padding-right: 20px;
+}
+.second-inventory-table__box5 {
+    width: 200px;
+    text-align: center;
+}
+.second-inventory-table__box6 {
+    width: 150px;
+    text-align: center;
+}
 
+/* kho third-functon */
+.inventory-third-table__box1 {
+    width: 180px;
+    text-align: center;
+}
+.inventory-third-table__box2 {
+    width: 150px;
+    text-align: center;
+}
+.inventory-third-table__box3 {
+    width: 150px;
+    text-align: center;
+}
+.inventory-third-table__box4 {
+    width: 300px;
+    text-align: left;
+    padding-left: 20px;
+}
+.inventory-third-table__box5 {
+    width: 300px;
+    text-align: left;
+    padding-left: 20px;
+}
 
+/* tong hop first-function */
+.general-operation-content {
+    width: 100%;
+    height: 100%;
+    background: url(../img/tonghop.svg);
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.general-operation-box1 {
+    width: 100px;
+    top: 29px;
+    left: 32px
+}
+.general-operation-box2 {
+    width: 100px;
+    top: 130px;
+    left: 217px
+}
+.general-operation-box3 {
+    width: 100px;
+    top: 130px;
+    left: 387px
+}
+.general-operation-box4 {
+    width: 100px;
+    top: 225px;
+    left: 70px
+}
+.cash-first-account-system-icon {
+    width: 24px;
+    height: 24px;
+    background: url(../img/allIcon.svg);
+    background-position: -1376px -200px;
+    margin-left: 53px;
+}
+.cash-first-summary-code-icon {
+    width: 24px;
+    height: 24px;
+    background: url(../img/allIcon.svg);
+    background-position: -1432px -200px;
+    margin-left: 30px;
+}
+.cash-first-expensive-items-icon {
+    width: 24px;
+    height: 24px;
+    background: url(../img/allIcon.svg);
+    background-position: -1264px -256px;
+    margin-left: 50px;
+}
 
+/* tong hop second-function */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.general-second-table__box1 {
+    width: 100px;
+    text-align: center;
+}
+.general-second-table__box2 {
+    width: 150px;
+    text-align: center;
+}
+.general-second-table__box3 {
+    width: 150px;
+    text-align: center;
+}
+.general-second-table__box4 {
+    width: 550px;
+    text-align: left;
+    padding-left: 20px;
+}
+.general-second-table__box5 {
+    width: 170px;
+    text-align: right;
+    padding-right: 20px;
+}
 
 
 
