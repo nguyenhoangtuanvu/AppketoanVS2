@@ -263,3 +263,15 @@ body {
 .financial-analysis {
     display: none;
 }
+
+
+/* modifier */
+.dropdown-list--active {
+    display: block;
+}
+.overlay--active {
+    display: block;
+}
+.open {
+    display: block;
+}

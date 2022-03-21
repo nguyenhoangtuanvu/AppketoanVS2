@@ -44,9 +44,6 @@
     font-size: 1.4rem;
     padding-right: 10px;
 }
-.sidebar-work-title {
-
-}
 .sidebar-work-list--active {
     border-left: 4px solid #1f5daa;
 }
@@ -199,7 +196,9 @@
 .header-end__notification:hover .header-end__bell-icon {
     background-position: -200px -88px;
 }
-
+.header--function {
+    cursor: pointer;
+}
 .header-login-user {
     width: 260px;
     height: 48px;
@@ -245,12 +244,21 @@
     background-color: rgba(10, 10, 10, 0.2);
     display: none;
 }
+.overlay-not-color {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 46px;
+    left: 0;
+    background-color: transparent;
+    display: none;
+}
 /* extended */
 .extended-function  {
     position: absolute;
     width: 800px;
     height: 250px;
-    top: 46px;
+    top: 48px;
     right: 0px;
     background-color: #fff;
     color: #333;
@@ -287,7 +295,7 @@
     position: absolute;
     width: 450px;
     height: 280px;
-    top: 46px;
+    top: 48px;
     right: 0px;
     background-color: #fff;
     color: #333;
@@ -329,7 +337,7 @@
     position: absolute;
     width: 400px;
     height: 240px;
-    top: 46px;
+    top: 48px;
     right: 0px;
     background-color: #fff;
     color: #333;
@@ -377,7 +385,7 @@
 .notification-function  {
     position: absolute;
     width: 380px;
-    top: 46px;
+    top: 48px;
     left: -76px;
     background-color: #fff;
     color: #333;
@@ -620,6 +628,7 @@
     padding: 15px 20px;
     font-size: 1.1rem;
     font-weight: 500;
+    cursor: pointer;
 }
 .nav-items:hover {
     color: var(--primary-color);
@@ -719,7 +728,7 @@
     justify-content: space-between;
     height: 20px;
     margin-bottom: 10px;
-    border-bottom: 2px dashed #333;
+    border-bottom: 1px dashed #ced0d4;
 }
 .money__title {
     font-size: 1.2rem;
@@ -1293,8 +1302,6 @@
     overflow-y: scroll;
     font-size: 1.2rem;
     font-weight: 500;
-}
-.second-table {
 }
 .table-header {
     border: 1px solid #c7c7c7;

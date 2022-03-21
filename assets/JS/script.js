@@ -90,6 +90,30 @@ const line = new Chart(
     config2
 );
 
+
+// open header box
+var headerFunction = document.getElementsByClassName("header--function");
+var headerFunctionBox = document.querySelectorAll(".header--function-box");
+var overlay = document.querySelector(".overlay");
+
+for(let i = 0; i < headerFunction.length; i++) {
+    headerFunction[i].addEventListener('click', function() {
+        console.log(i);
+        overlay.classList.remove('overlay--active');
+        for(let j = 0; j < headerFunctionBox.length; j++) {
+            headerFunctionBox[j].classList.remove('open')
+            if(i == j) {
+                overlay.classList.add('overlay--active');
+                headerFunctionBox[j].classList.add('open')
+            }
+        }
+        // close header box
+        overlay.addEventListener('click', function() {
+            overlay.classList.remove('overlay--active');
+            headerFunctionBox[i].classList.remove('open');
+        })
+    })
+}
 // open content from sidebar
 var sidebarWorkItems = document.getElementsByClassName("sidebar-work-items");
 var sidebarOpen = document.getElementsByClassName("sidebar--open");
@@ -197,7 +221,77 @@ for(let i = 0; i < generalNav.length; i++) {
     })
 }
 
-// 
+// sidebar active pseudo element
+var sidebarWorkListActive = document.getElementsByClassName("sidebar-work-list--active");
+
+for(let i = 0; i < sidebarWorkItems.length; i++) {
+    sidebarWorkItems[i].addEventListener('click', function() {
+        for(let j = 0; j < sidebarWorkItems.length; j++) {
+            sidebarWorkItems[j].classList.remove("sidebar-work-list--active");
+            if(i == j) {
+                sidebarWorkItems[j].classList.add("sidebar-work-list--active");
+            }
+        }
+    })
+}
+
+// navigation active pseudo element
+var navItems = document.getElementsByClassName("nav-items");
+
+for(let i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener('click', function() {
+        for(let j = 0; j < navItems.length; j++) {
+            navItems[j].classList.remove("nav-items--active");
+            if(i == j) {
+                navItems[j].classList.add("nav-items--active");
+            }
+        }
+    })
+}
+
+// open nad close box time line
+
+var boxTimeLine = document.getElementsByClassName("box-time-line");
+// var boxTimeLineDropdownList = document.getElementsByClassName("box-time-line__dropdown-list");
+
+var overlay2 = document.querySelector('.overlay-not-color');
+var boxTimeLineDropdownList = document.querySelectorAll(".box-time-line__dropdown-list");
+
+for(let i = 0; i < boxTimeLine.length; i++) {
+    boxTimeLine[i].addEventListener('click', function() {
+        console.log('r1')
+        overlay2.classList.remove('overlay--active');
+        for(let j = 0; j < boxTimeLineDropdownList.length; j++) {
+            boxTimeLineDropdownList[j].classList.remove("dropdown-list--active");
+            if(i == j) {
+                boxTimeLineDropdownList[j].classList.add("dropdown-list--active");
+                overlay2.classList.add('overlay--active');
+            }
+        }
+    })
+    overlay2.addEventListener('click', function() {
+        console.log('r2')
+        for(let a = 0; a < boxTimeLineDropdownList.length; a++) {
+            console.log('over2')
+            boxTimeLineDropdownList[i].classList.remove("dropdown-list--active");
+            overlay2.classList.remove('overlay--active');
+        }
+    });
+}
+
+// open modifier in time line box
+var dropdownItems = document.getElementsByClassName("dropdown-items");
+
+for(let i = 0; i < dropdownItems.length; i++) {
+    dropdownItems[i].addEventListener('click', function() {
+        for(let j = 0; j < dropdownItems.length; j++) {
+            dropdownItems[j].classList.remove("dropdown-items--active");
+            if(i == j) {
+                dropdownItems[j].classList.add("dropdown-items--active");
+            }
+        }
+    })
+}
 
 
 
@@ -216,4 +310,8 @@ for(let i = 0; i < generalNav.length; i++) {
 
 
 
-var aaa = document.getElementsByClassName("aaa")
+
+
+
+// asdf
+var aaa = document.getElementsByClassName("aaaa");
