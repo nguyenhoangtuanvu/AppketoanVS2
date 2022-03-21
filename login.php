@@ -26,14 +26,14 @@ if(isset($_POST["submit"])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in</title>
+  <title>Log in</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="assets/plugin/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="assets/plugin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="assets/plugin/plugin/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="assets/plugin/dist/css/adminlte.min.css">
 </head>
@@ -102,9 +102,9 @@ if(isset($_POST["submit"])) {
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="assets/plugin/plugins/jquery/jquery.min.js"></script>
+<script src="assets/plugin/plugin/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="assets/plugin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/plugin/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="assets/plugin/dist/js/adminlte.min.js"></script>
 </body>
