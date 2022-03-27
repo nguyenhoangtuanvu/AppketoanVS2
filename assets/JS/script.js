@@ -1,4 +1,21 @@
 // setup 
+// $(document).ready(function () {
+//     showGraph();
+// });
+// function showGraph() {
+//     $.post("../../content/chartData.php", function($RevenuMonth) {
+//         var label = [];
+//         var result = [];
+//         console.log($RevenuMonth);
+//         // foreach( $re)
+//     })
+
+// }
+
+
+// const ThuData = [18, 12, 6, 9, 12, 3, 9, 12, 6, 9, 12, 3, 9];
+// const ChiData = [-18, -12,- 6, -9, -12, -3, -9, -12, -6, -9, -12, -3, -9];
+// const TonData = [18, 12, 6, 9, 12, 3, 9, 12, 6, 9, 12, 3, 9];
 const stackedData = {
     labels: ['Th1', 'Th2', 'Th3', 'Th4', 'Th5', 'Th6', 'Th7', 'Th8', 'Th9', 'Th10', 'Th11', 'Th12'],
     datasets: [{
@@ -90,7 +107,6 @@ const line = new Chart(
     config2
 );
 
-
 // open header box
 var headerFunction = document.getElementsByClassName("header--function");
 var headerFunctionBox = document.querySelectorAll(".header--function-box");
@@ -114,58 +130,47 @@ for(let i = 0; i < headerFunction.length; i++) {
         })
     })
 }
-// open content from sidebar
-var sidebarWorkItems = document.getElementsByClassName("sidebar-work-items");
-var sidebarOpen = document.getElementsByClassName("sidebar--open");
-var homeFunction = document.getElementsByClassName("home-function")
 
-for(let i = 0; i < sidebarWorkItems.length; i++) {
-    sidebarWorkItems[i].addEventListener('click', function() {
-        for(let j = 0; j < sidebarOpen.length; j++) {
-            sidebarOpen[j].style.display = "none";
-            if(i == j) {
-                sidebarOpen[j].style.display = "block";
-                homeFunction[j].style.display = "block";
-            }
-        }
-    })
-}
+// // open content from sidebar
+// var sidebarWorkItems = document.getElementsByClassName("sidebar-work-items");
+// var sidebarOpen = document.getElementsByClassName("sidebar--open");
+// var homeFunction = document.getElementsByClassName("home-function");
 
-// open nav from sidebar
-var navOpenSidebar = document.getElementsByClassName("nav--open-sidebar");
+// for(let i = 0; i < sidebarWorkItems.length; i++) {
+//     sidebarWorkItems[i].addEventListener('click', function() {
+//         for(let j = 0; j < sidebarOpen.length; j++) {
+//             sidebarOpen[j].style.display = "none";
+//             if(i == j) {
+//                 sidebarOpen[j].style.display = "block";
+//                 homeFunction[j].style.display = "block";
+//             }
+//         }
+//     })
+// }
 
-for(let i = 0; i < sidebarWorkItems.length; i++) {
-    sidebarWorkItems[i].addEventListener('click', function() {
-        for(let j = 0; j < navOpenSidebar.length; j++) {
-            navOpenSidebar[j].style.display = "none";
-            if(i == j) {
-                navOpenSidebar[j].style.display = "block";
-            }
-        }
-    })
-}
-
-// open content from nav 
-var cashNav = document.getElementsByClassName("cash-nav")
-var cashFunction = document.getElementsByClassName("cash--function")
-var bankingNav = document.getElementsByClassName("banking-nav")
-var bankingFunction = document.getElementsByClassName("banking-function")
-var purchaseNav = document.getElementsByClassName("purchase-nav")
-var purchaseFunction = document.getElementsByClassName("purchase-function")
-var salesNav = document.getElementsByClassName("sales-nav")
-var salesFunction = document.getElementsByClassName("sales-function")
-var inventoryNav = document.getElementsByClassName("inventory-nav")
-var inventoryFunction = document.getElementsByClassName("inventory-function")
-var generalNav = document.getElementsByClassName("general-nav")
-var generalFunction = document.getElementsByClassName("general-function")
+// // open content from nav 
+var cashNav = document.getElementsByClassName("cash-nav");
+var cashFunction = document.getElementsByClassName("cash--function");
+var bankingNav = document.getElementsByClassName("banking-nav");
+var bankingFunction = document.getElementsByClassName("banking-function");
+var purchaseNav = document.getElementsByClassName("purchase-nav");
+var purchaseFunction = document.getElementsByClassName("purchase-function");
+var salesNav = document.getElementsByClassName("sales-nav");
+var salesFunction = document.getElementsByClassName("sales-function");
+var inventoryNav = document.getElementsByClassName("inventory-nav");
+var inventoryFunction = document.getElementsByClassName("inventory-function");
+var generalNav = document.getElementsByClassName("general-nav");
+var generalFunction = document.getElementsByClassName("general-function");
 
 
 for(let i = 0; i < cashNav.length; i++) {
     cashNav[i].addEventListener('click', function() {
+        console.log('aa');
         for(let j = 0; j < cashFunction.length; j++) {
-            cashFunction[j].style.display = "none";
+            cashFunction[j].classList.remove('open');
+            cashFunction[j].classList.remove('home-function');
             if(i == j) {
-                cashFunction[j].style.display = "block";
+                cashFunction[j].classList.add('open');
             }
         }
     })
@@ -174,6 +179,7 @@ for(let i = 0; i < bankingNav.length; i++) {
     bankingNav[i].addEventListener('click', function() {
         for(let j = 0; j < bankingFunction.length; j++) {
             bankingFunction[j].style.display = "none";
+            bankingFunction[j].classList.remove('home-function');
             if(i == j) {
                 bankingFunction[j].style.display = "block";
             }
@@ -184,6 +190,7 @@ for(let i = 0; i < purchaseNav.length; i++) {
     purchaseNav[i].addEventListener('click', function() {
         for(let j = 0; j < purchaseFunction.length; j++) {
             purchaseFunction[j].style.display = "none";
+            purchaseFunction[j].classList.remove('home-function');
             if(i == j) {
                 purchaseFunction[j].style.display = "block";
             }
@@ -194,6 +201,7 @@ for(let i = 0; i < salesNav.length; i++) {
     salesNav[i].addEventListener('click', function() {
         for(let j = 0; j < salesFunction.length; j++) {
             salesFunction[j].style.display = "none";
+            salesFunction[j].classList.remove('home-function');
             if(i == j) {
                 salesFunction[j].style.display = "block";
             }
@@ -204,6 +212,7 @@ for(let i = 0; i < inventoryNav.length; i++) {
     inventoryNav[i].addEventListener('click', function() {
         for(let j = 0; j < inventoryFunction.length; j++) {
             inventoryFunction[j].style.display = "none";
+            inventoryFunction[j].classList.remove('home-function');
             if(i == j) {
                 inventoryFunction[j].style.display = "block";
             }
@@ -212,8 +221,13 @@ for(let i = 0; i < inventoryNav.length; i++) {
 }
 for(let i = 0; i < generalNav.length; i++) {
     generalNav[i].addEventListener('click', function() {
+        // for(let a = 0; a < generalNav.length; a++) {
+        //     generalNav[a].classList.remove("nav-items--active");
+        // }
+        // generalNav[i].classList.add("nav-items--active");
         for(let j = 0; j < generalFunction.length; j++) {
             generalFunction[j].style.display = "none";
+            generalFunction[j].classList.remove('home-function');
             if(i == j) {
                 generalFunction[j].style.display = "block";
             }
@@ -221,21 +235,7 @@ for(let i = 0; i < generalNav.length; i++) {
     })
 }
 
-// sidebar active pseudo element
-var sidebarWorkListActive = document.getElementsByClassName("sidebar-work-list--active");
-
-for(let i = 0; i < sidebarWorkItems.length; i++) {
-    sidebarWorkItems[i].addEventListener('click', function() {
-        for(let j = 0; j < sidebarWorkItems.length; j++) {
-            sidebarWorkItems[j].classList.remove("sidebar-work-list--active");
-            if(i == j) {
-                sidebarWorkItems[j].classList.add("sidebar-work-list--active");
-            }
-        }
-    })
-}
-
-// navigation active pseudo element
+// // navigation active pseudo element
 var navItems = document.getElementsByClassName("nav-items");
 
 for(let i = 0; i < navItems.length; i++) {
@@ -249,7 +249,38 @@ for(let i = 0; i < navItems.length; i++) {
     })
 }
 
-// open nad close box time line
+// // open nav from sidebar
+// var navOpenSidebar = document.getElementsByClassName("nav--open-sidebar");
+
+// for(let i = 0; i < sidebarWorkItems.length; i++) {
+//     sidebarWorkItems[i].addEventListener('click', function() {
+//         for(let j = 0; j < navOpenSidebar.length; j++) {
+//             navOpenSidebar[j].style.display = "none";
+//             if(i == j) {
+//                 navOpenSidebar[j].style.display = "block";
+//             }
+//         }
+//     })
+// }
+
+
+// // sidebar active pseudo element
+var sidebarWorkListActive = document.getElementsByClassName("sidebar-work-list--active");
+
+for(let i = 0; i < sidebarWorkItems.length; i++) {
+    sidebarWorkItems[i].addEventListener('click', function() {
+        for(let j = 0; j < sidebarWorkItems.length; j++) {
+            sidebarWorkItems[j].classList.remove("sidebar-work-list--active");
+            if(i == j) {
+                sidebarWorkItems[j].classList.add("sidebar-work-list--active");
+            }
+        }
+    })
+}
+
+
+
+// // open and close box time line
 
 var boxTimeLine = document.getElementsByClassName("box-time-line");
 // var boxTimeLineDropdownList = document.getElementsByClassName("box-time-line__dropdown-list");
@@ -259,7 +290,6 @@ var boxTimeLineDropdownList = document.querySelectorAll(".box-time-line__dropdow
 
 for(let i = 0; i < boxTimeLine.length; i++) {
     boxTimeLine[i].addEventListener('click', function() {
-        console.log('r1')
         overlay2.classList.remove('overlay--active');
         for(let j = 0; j < boxTimeLineDropdownList.length; j++) {
             boxTimeLineDropdownList[j].classList.remove("dropdown-list--active");
@@ -270,7 +300,6 @@ for(let i = 0; i < boxTimeLine.length; i++) {
         }
     })
     overlay2.addEventListener('click', function() {
-        console.log('r2')
         for(let a = 0; a < boxTimeLineDropdownList.length; a++) {
             console.log('over2')
             boxTimeLineDropdownList[i].classList.remove("dropdown-list--active");
@@ -302,16 +331,3 @@ for(let i = 0; i < dropdownItems.length; i++) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// asdf
-var aaa = document.getElementsByClassName("aaaa");

@@ -149,7 +149,7 @@
             </div>
         </div>
         <div class="header-login-user header--function">
-            <img src="assets/img/getavatar.png" alt="" class="user-avatar">
+            <img src="/Appketoan/assets/img/getavatar.png" alt="" class="user-avatar">
             <span class="login-user-name"><?php echo $_SESSION['logged'] ?></span>
             <i class="fa-solid fa-angle-down header-end__down-icon"></i>
             <div class="login-function header--function-box">

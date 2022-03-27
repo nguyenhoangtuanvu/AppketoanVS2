@@ -94,174 +94,43 @@ body {
     /* display: none; */
 }
 .nav-cash {
-    display: none;
-}
-.nav-banking {
-    display: none;
-}
-.nav-purchase {
-    display: none;
-}
-.nav-sales {
-    display: none;
-}
-.nav-invoice-managing {
-    display: none;
-}
-.nav-inventory {
-    display: none;
-}
-.nav-fixed-assets {
-    display: none;
-}
-.nav-tax {
-    display: none;
-}
-.nav-price {
-    display: none;
-}
-.nav-general {
-    display: none;
-}
-.nav-budget {
-    display: none;
-}
-.nav-report {
-    display: none;
-}
-.nav-finaical-analysis {
-    display: none;
-}
-
-/* menu content */
-.overview {
     /* display: none; */
 }
-.cash {
-    display: none;
+.nav-banking {
+    /* display: none; */
 }
-.cash-first-function {
-    display: none;
+.nav-purchase {
+    /* display: none; */
 }
-.cash-second-function {
-    display: none;
+.nav-sales {
+    /* display: none; */
 }
-.cash-third-function {
-    display: none;
+.nav-invoice-managing {
+    /* display: none; */
 }
-.cash-fourth-function {
-    display: none;
+.nav-inventory {
+    /* display: none; */
 }
-
-
-.banking {
-    display: none;
+.nav-fixed-assets {
+    /* display: none; */
 }
-.banking-first-function {
-    display: none;
+.nav-tax {
+    /* display: none; */
 }
-.banking-second-function {
-    display: none;
+.nav-price {
+    /* display: none; */
 }
-.banking-third-function {
-    display: none;
+.nav-general {
+    /* display: none; */
 }
-
-
-
-.purchase {
-    display: none;
+.nav-budget {
+    /* display: none; */
 }
-.purchase-first-function {
-    display: none;
+.nav-report {
+    /* display: none; */
 }
-.purchase-second-function {
-    display: none;
-}
-.purchase-third-function {
-    display: none;
-}
-.purchase-fourth-function {
-    display: none;
-}
-
-
-.sales {
-    display: none;
-}
-.sales-first-function {
-    display: none;
-}
-.sales-second-function {
-    display: none;
-}
-.sales-third-function {
-    display: none;
-}
-.sales-fourth-function {
-    display: none;
-}
-
-.invoice-managing {
-    display: none;
-}
-.invoice-first-function {
-    display: none;
-}
-
-
-.inventory {
-    display: none;
-}
-.inventory-first-function {
-    display: none;
-}
-.inventory-second-function {
-    display: none;
-}
-.inventory-third-function {
-    display: none;
-}
-.inventory-fourth-function {
-    display: none;
-}
-
-
-
-.tool {
-    display: none;
-}
-.fixed-assets {
-    display: none;
-}
-.tax {
-    display: none;
-}
-.price {
-    display: none;
-}
-
-.general {
-    display: none;
-}
-.general-first-function {
-    display: none;
-}
-.general-second-function {
-    display: none;
-}
-.general-third-function {
-    display: none;
-}
-
-.budget {
-    display: none;
-}
-.report {
-    display: none;
-}
-.financial-analysis {
-    display: none;
+.nav-finaical-analysis {
+    /* display: none; */
 }
 
 
