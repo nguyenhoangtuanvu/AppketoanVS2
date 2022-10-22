@@ -1,10 +1,11 @@
 <?php 
     // bán hàng
-    $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 1;
+    $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 10;
     $current_page = !empty($_GET['currant_page']) ? $_GET['currant_page'] : 1;
     $offset = ($current_page - 1) * $item_per_page; 
 
-    $querySales = mysqli_query($con, "SELECT * FROM `sales` INNER JOIN `customer` ORDER BY `sales`.`dateTime` ASC LIMIT " . $item_per_page . " OFFSET " . $offset);
+    $querySales = mysqli_query($con, "SELECT `sales`.`id`, `sales`.`dateTime` , `customer`.`name`, `sales`.`totalMoney`, `sales`.`invoice`
+    FROM `sales` INNER JOIN `customer` ON `sales`.`customerid` = `customer`.`id`  ORDER BY `sales`.`dateTime` ASC LIMIT " . $item_per_page . " OFFSET " . $offset);
     
     $totalRecords = mysqli_query($con, "SELECT * FROM `sales`");
     $totalRecords = $totalRecords-> num_rows;
@@ -25,70 +26,72 @@
 ?>
 <div class="sales-second-function sales-function">
     <div class="second-header">
-        <div class="second-header-heading">Giao dịch bán hàng</div>
-        <button class="second-header__btn1">Thêm</button>
+        <div class="second-header-heading"><?= $main['Giao dịch bán hàng'] ?></div>
+        <button class="second-header__btn1">
+        <a href="addData.php?salesNav=salesSecond&data=addSales" class="btn-link"><?= $main['Thêm'] ?></a>
+        </button>
     </div>
     <div class="second-box">
         <div class="sales-second-box1">
             <div class="second-box-wrap">
                 <div class="second-box__money-total"><?= number_format($revenuYear, 0, ",",".") ?></div>
-                <div class="second-box__money-title">Doanh thu trong năm</div>
+                <div class="second-box__money-title"><?= $main['Doanh thu trong năm'] ?></div>
             </div>
         </div>
         <div class="sales-second-box2">
             <div class="second-box-wrap">
                 <div class="second-box__money-total"><?= number_format($notInvoice, 0, ",",".") ?></div>
-                <div class="second-box__money-title">Chưa xuất hóa đơn</div>
+                <div class="second-box__money-title"><?= $main['Chưa xuất hóa đơn'] ?></div>
             </div>
         </div>
         <div class="sales-second-box3">
             <div class="second-box-wrap">
                 <div class="second-box__money-total"><?= number_format($DebtCusOver, 0, ",",".") ?></div>
-                <div class="second-box__money-title">Nợ quá hạn</div>
+                <div class="second-box__money-title"><?= $main['Nợ quá hạn'] ?></div>
             </div>
         </div>
         <div class="sales-second-box4">
             <div class="second-box-wrap">
                 <div class="second-box__money-total"><?= number_format($TotalDebtCollect, 0, ",",".") ?></div>
-                <div class="second-box__money-title">Tổng nợ phải thu</div>
+                <div class="second-box__money-title"><?= $main['Tổng nợ phải thu'] ?></div>
             </div>
         </div>
         <div class="sales-second-box5">
             <div class="second-box-wrap">
                 <div class="second-box__money-total"><?= number_format($TotalCusCollected, 0, ",",".") ?></div>
-                <div class="second-box__money-title">Đã thanh toán</div>
+                <div class="second-box__money-title"><?= $main['Đã thanh toán'] ?></div>
             </div>
         </div>
     </div>
     <div class="second-content-nav">
         <ul class="second-content-nav__list">
-            <li class="second-content-nav__items second-content-nav__items--active">Bán hàng</li>
-            <li class="second-content-nav__items">Hóa đơn</li>
+            <li class="second-content-nav__items second-content-nav__items--active"><?= $main['Bán hàng'] ?></li>
+            <li class="second-content-nav__items"><?= $main['Hóa đơn'] ?></li>
         </ul>
     </div>
     <div class="second-content">
         <div class="second-content-wrap">
             <div class="second-content-header">
                 <div class="second-content__filter">
-                    <span class="second-content__filter-label">Lọc</span>
+                    <span class="second-content__filter-label"><?= $main['Lọc'] ?></span>
                     <i class="fa-solid fa-angle-down"></i>
                     <div class="second-content-time-line__dropdown-list">
                         <span class="dropdown-label">Thu, chi</span>
                         <div class="dropdown-box-wrap"> 
-                            <input type="text" class="dropdown-input" placeholder="Tất cả">
+                            <input type="text" class="dropdown-input" placeholder="<?= $main['Tất cả'] ?>">
                             <i class="fa-solid fa-angle-down"></i>
                             <ul class="dropdown-box-list">
-                                <li class="dropdown-items dropdown-items--active">Tất cả</li>
+                                <li class="dropdown-items dropdown-items--active"><?= $main['Tất cả'] ?></li>
                                 <li class="dropdown-items">Thu</li>
                                 <li class="dropdown-items">Chi</li>
                             </ul>
                         </div>
                         <span class="dropdown-label">Thời gian</span>
                         <div class="dropdown-box-wrap">
-                            <input type="text" class="dropdown-input" placeholder="Hôm nay">
+                            <input type="text" class="dropdown-input" placeholder="<?= $main['Hôm nay'] ?>">
                             <i class="fa-solid fa-angle-down"></i>
                             <ul class="dropdown-box-list">
-                                <li class="dropdown-items dropdown-items--active">Hôm nay</li>
+                                <li class="dropdown-items dropdown-items--active"><?= $main['Hôm nay'] ?></li>
                                 <li class="dropdown-items">Tuần này</li>
                                 <li class="dropdown-items">Tháng này</li>
                                 <li class="dropdown-items">Tháng 1</li>
@@ -105,25 +108,25 @@
                                 <li class="dropdown-items">Tháng 12</li>
                             </ul>
                         </div>
-                        <button class="dropdown-btn">Lọc</button>
+                        <button class="dropdown-btn"><?= $main['Lọc'] ?></button>
                     </div>
                 </div>
-                <span class="second-content-filter__value">Hôm nay</span>
+                <span class="second-content-filter__value"><?= $main['Hôm nay'] ?></span>
                 <div class="header-search">
-                    <input type="text" class="header-search__input" placeholder="Nhập từ khóa tìm kiếm">
-                    <i class="fa-solid fa-magnifying-glass header-end__search-icon"></i>
+                    <input type="text" class="header-search__input" placeholder="<?= $main['Nhập từ khóa tìm kiếm'] ?>">
+                    <div class="header-end__search-icon"></div>
                 </div>
             </div>   
             <div class="second-content-table">
                 <table class="second-table">
                     <thead class="second-table__thead">
                         <tr>
-                            <th class="sales-second-table__box1 table-header">Ngày hoạch toán</th>              
-                            <th class="sales-second-table__box2 table-header">Số hóa đơn</th>              
-                            <th class="sales-second-table__box3 table-header">Khách hàng</th>              
-                            <th class="sales-second-table__box4 table-header">Tổng tiền thanh toán</th>              
-                            <th class="sales-second-table__box5 table-header">TT lập hóa đơn</th>              
-                            <th class="sales-second-table__box6 table-header">Chức năng</th>              
+                            <th class="sales-second-table__box1 table-header"><?= $main['Ngày hoạch toán'] ?></th>              
+                            <th class="sales-second-table__box2 table-header"><?= $main['Số hóa đơn'] ?></th>              
+                            <th class="sales-second-table__box3 table-header"><?= $main['Khách hàng'] ?></th>              
+                            <th class="sales-second-table__box4 table-header"><?= $main['Tổng tiền thanh toán'] ?></th>              
+                            <th class="sales-second-table__box5 table-header"><?= $main['TT lập hóa đơn'] ?></th>              
+                            <th class="sales-second-table__box6 table-header"><?= $main['Chức năng'] ?></th>              
                         </tr>
                     </thead> 
                     <tbody class="second-table__body">
@@ -139,11 +142,11 @@
                             <td class="sales-second-table__box4 table-box"><?= number_format($row['totalMoney'], 0, ",",".") ?></td>              
                             <td class="sales-second-table__box5 table-box"><?= $invoice ?></td>              
                             <td class="third-table__box6 table-box">
-                                <a href="#" class="third-table-see">Phát hành hóa đơn</a>
-                                <i class="fa-solid fa-angle-down"></i>
+                                <a href="addData.php?salesNav=<?= $tam ?>&data=view&id=<?= $row['id'] ?>" class="third-table-see"><?= $main['Phát hành hóa đơn'] ?></a>
+                                <i class="fa-solid fa-angle-down open--box-function"></i>
                                 <ul class="third-table-function-list">
                                     <li class="third-table-function-items">
-                                        <a href="#" class="third-table-function__delete">Nhân bản</a>
+                                        <a href="#" class="third-table-see"><?= $main['Nhân bản'] ?></a>
                                     </li>
                                 </ul>
                             </td>             
@@ -152,7 +155,7 @@
                     </tbody>
                     <tfoot class="second-table__footer">
                         <tr>
-                            <th class="second-table__box1 footer-box">Tổng</th>         
+                            <th class="second-table__box1 footer-box"><?= $main['Tổng'] ?></th>         
                             <th class="second-table__box2 footer-box"></th>         
                             <th class="second-table__box3 footer-box"></th>         
                             <th class="second-table__box4 footer-box"><?= number_format($TableTotalMoney, 0, ",",".") ?></th>         
@@ -163,7 +166,7 @@
                 </table>
             </div>
             <div class="second-footer">
-                <div class="second-footer__label">Tổng số: <span><?= $salesCount ?></span> bản ghi</div>
+                <div class="second-footer__label"><?= $main['Tổng số'] ?>: <span><?= $salesCount ?></span> <?= $main['bản ghi'] ?></div>
                 <div class="second-footer-right">
                     <?php include 'salesPagin.php' ?>
                 </div>

@@ -1,6 +1,6 @@
 <?php session_start(); 
 if(!isset($_SESSION["logged"])) {
-    header("location:login.php");
+    header("location:/AppketoanVS2/login.php");
 }
 ?>
 <?php 
@@ -41,16 +41,11 @@ while($row = mysqli_fetch_array($queryProductsOut)) {
             <div class="navigation">
                 <div class="nav-inventory nav-function nav--open-sidebar">
                     <ul class="nav-list">
-                        <li class="nav-items inventory-nav nav-items--active">
-                            <a href="?inventoryNav=inventoryFirst" class="nav-link">Quy trình</a></li>
-                        <li class="nav-items inventory-nav">
-                            <a href="?inventoryNav=inventorySecond" class="nav-link">Nhập, xuất kho</a></li>
-                        <li class="nav-items inventory-nav">
-                            <a href="?inventoryNav=inventoryThird" class="nav-link">Kiểm kê</a></li>
-                        <li class="nav-items inventory-nav">
-                            <a href="?inventoryNav=inventoryFourth" class="nav-link">Hàng hóa, dịch vụ</a></li>
-                        <li class="nav-items inventory-nav">
-                            <a href="?inventoryNav=inventoryFifth" class="nav-link">Báo cáo</a></li>
+                        <a href="?inventoryNav=inventoryFirst" class="nav-link"><li class="nav-items inventory-nav nav-items--active"><?= $main['Quy trình'] ?></li></a>
+                        <a href="?inventoryNav=inventorySecond" class="nav-link"><li class="nav-items inventory-nav"><?= $main['Nhập, xuất kho'] ?></li></a>
+                        <a href="?inventoryNav=inventoryThird" class="nav-link"><li class="nav-items inventory-nav"><?= $main['Kiểm kê'] ?></li></a>
+                        <a href="?inventoryNav=inventoryFourth" class="nav-link"><li class="nav-items inventory-nav"><?= $main['Hàng hóa, dịch vụ'] ?></li></a>
+                        <a href="?inventoryNav=inventoryFifth" class="nav-link"><li class="nav-items inventory-nav"><?= $main['Báo cáo'] ?></li></a>
                     </ul>
                 </div>
             </div>
@@ -75,11 +70,36 @@ while($row = mysqli_fetch_array($queryProductsOut)) {
                         }
                     ?>  
                 </div>
-    <script type="text/javascript" src="../../assets/JS/script.js"></script>
+<script type="text/javascript" src="../../assets/JS/script.js"></script>
     <!-- <script type="text/javascript">
         var costMonth = <?php json_encode($CostMonth); ?>;
         console.log(costMonth);
     </script> -->
-</script>
+    <script>
+var boxFunction = document.getElementsByClassName("open--box-function");
+
+var overlay2 = document.querySelector('.overlay-not-color');
+var boxFunctionDropdownList = document.querySelectorAll(".third-table-function-list");
+
+for(let i = 0; i < boxFunction.length; i++) {
+    boxFunction[i].addEventListener('click', function() {
+        overlay2.classList.remove('overlay--active');
+        for(let j = 0; j < boxFunctionDropdownList.length; j++) {
+            boxFunctionDropdownList[j].classList.remove("dropdown-list--active");
+            if(i == j) {
+                boxFunctionDropdownList[j].classList.add("dropdown-list--active");
+                overlay2.classList.add('overlay--active');
+            }
+        }
+    })
+    overlay2.addEventListener('click', function() {
+        for(let a = 0; a < boxFunctionDropdownList.length; a++) {
+            console.log('over2')
+            boxFunctionDropdownList[i].classList.remove("dropdown-list--active");
+            overlay2.classList.remove('overlay--active');
+        }
+    });
+}
+    </script>
 </body>
 </html>

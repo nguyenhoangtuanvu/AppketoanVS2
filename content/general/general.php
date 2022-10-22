@@ -1,7 +1,15 @@
 <?php session_start(); 
 if(!isset($_SESSION["logged"])) {
-    header("location:login.php");
+    header("location:/AppketoanVS2/login.php");
 }
+// language
+include_once '../../languageHelper.php';
+$object = new LanguageHelper();
+$lang = $object->checkLang();
+include_once('../../'.$lang);
+$vi = $main['en-vi'];
+$en = $main['en-en'];
+$language = $main['language'];
 ?>
 <?php 
     include '../../connect_db.php';
@@ -32,12 +40,9 @@ if(!isset($_SESSION["logged"])) {
             <div class="navigation">
                 <div class="nav-general nav-function nav--open-sidebar">
                     <ul class="nav-list">
-                        <li class="nav-items general-nav nav-items--active">
-                            <a href="?generalNav=generalFirst" class="nav-link">Quy trình</a> </li>
-                        <li class="nav-items general-nav">
-                            <a href="?generalNav=generalFirst" class="nav-link">Kết chuyển lãi lỗ</a></li>
-                        <li class="nav-items general-nav">
-                            <a href="?generalNav=generalFirst" class="nav-link">Báo cáo</a></li>
+                        <a href="?generalNav=generalFirst" class="nav-link"><li class="nav-items general-nav nav-items--active">Quy trình </li></a>
+                        <a href="?generalNav=generalSecond" class="nav-link"><li class="nav-items general-nav">Kết chuyển lãi lỗ</li></a>
+                        <a href="?generalNav=generalThird" class="nav-link"><li class="nav-items general-nav">Báo cáo</li></a>
                     </ul>
                 </div>
             </div>

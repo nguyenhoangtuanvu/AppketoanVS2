@@ -46,6 +46,7 @@ table {
 /* base */
 :root {
     --primary-color: #0075c0;
+    --primary-color-hover: #0d5f92;
     --primary-color-green: #4ea344;
     --primary-color-orange: #ff7f2c;
     --text-color: #021533;

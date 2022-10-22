@@ -1,7 +1,8 @@
 <?php session_start(); 
 if(!isset($_SESSION["logged"])) {
-    header("location:../../login.php");
+    header("location:/AppketoanVS2/login.php");
 }
+
 ?>
 <?php 
     include '../../connect_db.php';
@@ -55,14 +56,10 @@ if(!isset($_SESSION["logged"])) {
             <div class="navigation">
                 <div class="nav-cash nav-function nav--open-sidebar">
                     <ul class="nav-list">
-                        <li class="nav-items cash-nav nav-items--active">
-                            <a href="?cashNav=cashFirst" class="nav-link">Quy trình</a> </li>
-                        <li class="nav-items cash-nav">
-                            <a href="?cashNav=cashSecond" class="nav-link">Thu, chi tiền</a> </li>
-                        <li class="nav-items cash-nav">
-                            <a href="?cashNav=cashThird" class="nav-link">Kiểm kê</a> </li>
-                        <li class="nav-items cash-nav">
-                            <a href="?cashNav=cashFourth" class="nav-link">Báo cáo</a> </li>
+                    <a href="?cashNav=cashFirst" class="nav-link"><li class="nav-items cash-nav "><?= $main['Quy trình'] ?> </li></a>
+                    <a href="?cashNav=cashSecond" class="nav-link"><li class="nav-items cash-nav"><?= $main['Thu, chi tiền'] ?></li></a> 
+                    <a href="?cashNav=cashThird" class="nav-link"><li class="nav-items cash-nav"><?= $main['Kiểm kê'] ?></li></a> 
+                    <a href="?cashNav=cashFourth" class="nav-link"><li class="nav-items cash-nav"><?= $main['Báo cáo'] ?></li></a> 
                     </ul>
                 </div>
             </div>
@@ -91,5 +88,31 @@ if(!isset($_SESSION["logged"])) {
         </div>
     </div>
     <script type="text/javascript" src="../../assets/JS/script.js"></script>
+    <script>
+var boxFunction = document.getElementsByClassName("open--box-function");
+
+var overlay2 = document.querySelector('.overlay-not-color');
+var boxFunctionDropdownList = document.querySelectorAll(".third-table-function-list");
+
+for(let i = 0; i < boxFunction.length; i++) {
+    boxFunction[i].addEventListener('click', function() {
+        overlay2.classList.remove('overlay--active');
+        for(let j = 0; j < boxFunctionDropdownList.length; j++) {
+            boxFunctionDropdownList[j].classList.remove("dropdown-list--active");
+            if(i == j) {
+                boxFunctionDropdownList[j].classList.add("dropdown-list--active");
+                overlay2.classList.add('overlay--active');
+            }
+        }
+    })
+    overlay2.addEventListener('click', function() {
+        for(let a = 0; a < boxFunctionDropdownList.length; a++) {
+            console.log('over2')
+            boxFunctionDropdownList[i].classList.remove("dropdown-list--active");
+            overlay2.classList.remove('overlay--active');
+        }
+    });
+}
+    </script>
 </body>
 </html>

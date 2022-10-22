@@ -1,138 +1,49 @@
-// setup 
-// $(document).ready(function () {
-//     showGraph();
-// });
-// function showGraph() {
-//     $.post("../../content/chartData.php", function($RevenuMonth) {
-//         var label = [];
-//         var result = [];
-//         console.log($RevenuMonth);
-//         // foreach( $re)
-//     })
-
-// }
-
-
-// const ThuData = [18, 12, 6, 9, 12, 3, 9, 12, 6, 9, 12, 3, 9];
-// const ChiData = [-18, -12,- 6, -9, -12, -3, -9, -12, -6, -9, -12, -3, -9];
-// const TonData = [18, 12, 6, 9, 12, 3, 9, 12, 6, 9, 12, 3, 9];
-const stackedData = {
-    labels: ['Th1', 'Th2', 'Th3', 'Th4', 'Th5', 'Th6', 'Th7', 'Th8', 'Th9', 'Th10', 'Th11', 'Th12'],
-    datasets: [{
-    label: 'Tổng thu',
-    data: [18, 12, 6, 9, 12, 3, 9, 12, 6, 9, 12, 3, 9],
-    backgroundColor: [
-        'rgba(0, 117, 192, 0.7)'
-    ],
-    borderColor: [
-        'rgba(0, 117, 192, 1)'
-    ],
-    borderWidth: 1
-    }, {
-    label: 'Tổng chi',
-    data: [-18, -12,- 6, -9, -12, -3, -9, -12, -6, -9, -12, -3, -9],
-    backgroundColor: [
-        'rgba(212, 215, 220, 0.8)'
-    ],
-    borderColor: [
-        'rgba(212, 215, 220, 1)'
-    ],
-    borderWidth: 1
-    }, {
-    label: 'Tồn',
-    data: [18, 12, 6, 9, 12, 3, 9, 12, 6, 9, 12, 3, 9],
-    backgroundColor: 'rgba(248, 135, 42, 0.2)',
-    borderColor: 'rgba(248, 135, 42, 1)',
-    tension: .4,
-    type: 'line'
-    }]
-};
-
-// config 
-const config = {
-    type: 'bar',
-    data: stackedData,
-    options: {
-    scales: {
-        x: {
-            stacked: true
-        },
-        y: {
-        beginAtZero: true,
-        stacked: true
+    function changeValue(val) {
+        if (val==="vi") {
+        window.location.href = "?lang=vi"; 
+        }
+        else {
+        window.location.href = "?lang=en"; 
         }
     }
-    }
-};
-
-// render init block
-const stacked = new Chart(
-    document.getElementById('stackedChart'),
-    config
-);
-
-
-const lineData = {
-    labels: ['Th1', 'Th2', 'Th3', 'Th4', 'Th5', 'Th6', 'Th7', 'Th8', 'Th9', 'Th10', 'Th11', 'Th12'],
-    datasets: [{
-    label: 'Doanh thu',
-    data: [18, 12, 6, 9, 12, 3, 9, 12, 6, 9, 12, 3, 9],
-    backgroundColor: 'rgba(248, 135, 42, 0.2)',
-    borderColor: 'rgba(248, 135, 42, 1)',
-    tension: .4,
-    type: 'line'
-    }]
-};
-
-// config 
-const config2 = {
-    type: 'line',
-    data: lineData,
-    options: {
-    scales: {
-        x: {
-            stacked: true
-        },
-        y: {
-        beginAtZero: true,
-        stacked: true
-        }
-    }
-    }
-};
-
-// render init block
-const line = new Chart(
-    document.getElementById('lineChart'),
-    config2
-);
 
 // open header box
 var headerFunction = document.getElementsByClassName("header--function");
 var headerFunctionBox = document.querySelectorAll(".header--function-box");
 var overlay = document.querySelector(".overlay");
+// open language
+var language = document.querySelector(".setting-function__language");
+var languageBox = document.querySelector(".box-language");
 
 for(let i = 0; i < headerFunction.length; i++) {
     headerFunction[i].addEventListener('click', function() {
-        console.log(i);
         overlay.classList.remove('overlay--active');
         for(let j = 0; j < headerFunctionBox.length; j++) {
             headerFunctionBox[j].classList.remove('open')
             if(i == j) {
                 overlay.classList.add('overlay--active');
                 headerFunctionBox[j].classList.add('open')
+
             }
         }
+        language.addEventListener('click', function() {
+            for(let j = 0; j < headerFunctionBox.length; j++) {
+                console.log(headerFunctionBox[j]);
+                headerFunctionBox[j].classList.remove('open');
+            }
+            languageBox.classList.add('open');
+        }) 
         // close header box
         overlay.addEventListener('click', function() {
             overlay.classList.remove('overlay--active');
             headerFunctionBox[i].classList.remove('open');
+            languageBox.classList.remove('open');
         })
     })
 }
 
 // // open content from sidebar
-// var sidebarWorkItems = document.getElementsByClassName("sidebar-work-items");
+var sidebarWorkItems = document.getElementsByClassName("sidebar-work-items");
 // var sidebarOpen = document.getElementsByClassName("sidebar--open");
 // var homeFunction = document.getElementsByClassName("home-function");
 
@@ -308,6 +219,33 @@ for(let i = 0; i < boxTimeLine.length; i++) {
     });
 }
 
+// open box function
+
+// var boxFunction = document.getElementsByClassName("open--box-function");
+// var overlay2 = document.querySelector('.overlay-not-color');
+// var boxFunctionDropdownList = document.querySelectorAll(".third-table-function-list");
+
+// for(let i = 0; i < boxFunction.length; i++) {
+//     boxFunction[i].addEventListener('click', function() {
+//         overlay2.classList.remove('overlay--active');
+//         for(let j = 0; j < boxFunctionDropdownList.length; j++) {
+//             boxFunctionDropdownList[j].classList.remove("dropdown-list--active");
+//             if(i == j) {
+//                 boxFunctionDropdownList[j].classList.add("dropdown-list--active");
+//                 overlay2.classList.add('overlay--active');
+//             }
+//         }
+//     })
+//     overlay2.addEventListener('click', function() {
+//         for(let a = 0; a < boxFunctionDropdownList.length; a++) {
+//             console.log('over2')
+//             boxFunctionDropdownList[i].classList.remove("dropdown-list--active");
+//             overlay2.classList.remove('overlay--active');
+//         }
+//     });
+// }
+
+
 // open modifier in time line box
 var dropdownItems = document.getElementsByClassName("dropdown-items");
 
@@ -322,9 +260,30 @@ for(let i = 0; i < dropdownItems.length; i++) {
     })
 }
 
+// filter
 
+var filterBtn = document.getElementsByClassName('second-content__filter');
+var filterBox = document.querySelectorAll('.second-content-time-line__dropdown-list');
 
-
+for(let i = 0; i < filterBtn.length; i++) {
+    filterBtn[i].addEventListener('click', function() {
+        overlay2.classList.remove('overlay--active');
+        for(let j = 0; j < filterBox.length; j++) {
+            filterBox[j].classList.remove("dropdown-list--active");
+            if(i == j) {
+                filterBox[j].classList.add("dropdown-list--active");
+                overlay2.classList.add('overlay--active');
+            }
+        }
+    })
+    overlay2.addEventListener('click', function() {
+        for(let a = 0; a < filterBox.length; a++) {
+            console.log('over2')
+            filterBox[i].classList.remove("dropdown-list--active");
+            overlay2.classList.remove('overlay--active');
+        }
+    });
+}
 
 
 

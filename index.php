@@ -2,6 +2,15 @@
 if(!isset($_SESSION["logged"])) {
     header("location:login.php");
 }
+
+    // language
+    include_once 'LanguageHelper.php';
+    $object = new LanguageHelper();
+    $lang = $object->checkLang();
+    include_once($lang);
+    $vi = $main['en-vi'];
+    $en = $main['en-en'];
+    $language = $main['language'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +23,16 @@ if(!isset($_SESSION["logged"])) {
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Roboto&display=swap" rel="stylesheet">
     <title>Kế Toán</title>
+    <script language="javascript">
+    function changeValue(val) {
+        if (val==="vi") {
+        window.location.href = "?lang=vi"; 
+        }
+        else {
+        window.location.href = "?lang=en"; 
+        }
+    }
+</script>
 </head>
 <body>
     <div class="grid">
@@ -23,7 +42,7 @@ if(!isset($_SESSION["logged"])) {
             <!-- navigation start -->
             <div class="navigation">
                 <div class="nav-overview nav--open-sidebar">
-                    <h2 class="overview-heading">Tổng quan</h2>
+                    <h2 class="overview-heading"><?= $main['tổng quan'] ?></h2>
                 </div>
             </div>
             <!-- navigation end -->

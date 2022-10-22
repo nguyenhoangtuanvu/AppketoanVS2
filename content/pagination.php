@@ -13,7 +13,7 @@ if($current_page > 3) {
 }
 for($num = 1; $num <= $totalRecords; $num++) {
     if($num != $current_page) {
-        if($num > $current_page - 2 && $num < $current_page + 2) {
+        if($num > $current_page - 3 && $num < $current_page + 3) {
 ?>
             <a class="second-footer__count-paging" href="?purchaseNav=<?= $tam ?>&?per_page=<?= $item_per_page ?>&currant_page=<?= $num ?>"><?= $num ?></a>
 <?php

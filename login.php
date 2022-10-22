@@ -5,19 +5,26 @@ require_once "connect_db.php";
 $loginInfo_err = "";
 
 if(isset($_POST["submit"])) {
-    $loginEmail = $_POST["email"]; 
-    $loginPassword = ($_POST["password"]);
-    $rows = mysqli_query($con, "
-    SELECT * FROM account WHERE email= '$loginEmail' AND password = '$loginPassword'
-    ");
-    $count = mysqli_num_rows($rows);
-    if($count == 1) {
-        $_SESSION["logged"] = $loginEmail ;
-        header("location:index.php");
+  $loginEmail = $_POST["email"]; 
+  $loginPassword = ($_POST["password"]);
+  $result = mysqli_query($con, "SELECT * FROM account WHERE email= '$loginEmail' AND password = '$loginPassword'");
+  if(!$result) {
+    $loginInfo_err = "Đăng nhập không thành công!";
+  }else {
+    $user = mysqli_fetch_assoc($result);
+    $userPrivileges = mysqli_query($con, "SELECT * FROM `user_privilege` INNER JOIN `privilege` ON user_privilege.privilege_id = privilege.id WHERE user_privilege.user_id = ".$user['id']);
+    $userPrivileges = mysqli_fetch_all($userPrivileges, MYSQLI_ASSOC);
+
+    if(!empty($userPrivileges)) {
+      $user['Privileges'] = array();
+      foreach($userPrivileges as $privilege) {
+        $user['Privileges'][] = $privilege['url_match'];
+      }
     }
-    else {
-        $loginInfo_err = "Đăng nhập không thành công!";
-    }
+    $_SESSION['logged'] = $user;
+    // var_dump($_SESSION['logged']);exit;
+    header("location:index.php");
+  }
 }
 
 ?>
